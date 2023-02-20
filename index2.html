@@ -5,14 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/@material-tailwind/html@latest/scripts/popover.js"
+    ></script>
+    <script src="script.js"></script>
     <title>Tailwind CSS</title>
   </head>
   <body>
-    <div class="flex flex-col justify-center mt-5">
+    <div class="flex flex-col mt-5">
       <div class="text-center mb-5 mt-3 border-t-2 border-gray-600">
         <h2 class="underline decoration-dashed">Form</h2>
       </div>
-      <div class="w-1/4 flex justify-center">
+      <div class="w-1/4 mx-auto">
         <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
           <div class="mb-4">
             <label
@@ -85,6 +90,50 @@
       </div>
       <div class="text-center mb-5 mt-3 border-t-2 border-gray-600">
         <h2 class="underline decoration-dashed">Popover</h2>
+      </div>
+      <!-- use data-popover-taget in the button and trigger element by data-popover="{popoverName}" -->
+      <div class="mx-auto">
+        <button
+          data-ripple-light="true"
+          data-popover-target="popover"
+          class="middle none center rounded-lg bg-gray-400 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-300/20 transition-all hover:shadow-lg hover:shadow-gray-300/40 active:opacity-[0.85]"
+        >
+          Click to Show Popover
+        </button>
+        <div
+          data-popover="popover"
+          class="absolute w-max whitespace-normal break-words rounded-lg border border-blue-gray-50 bg-white p-4 font-sans text-sm font-normal text-blue-gray-500 shadow-lg shadow-blue-gray-500/10 focus:outline-none"
+        >
+          Popover example. Heeey!
+        </div>
+      </div>
+      <div class="text-center mb-5 mt-3 border-t-2 border-gray-600">
+        <h2 class="underline decoration-dashed">Modal</h2>
+      </div>
+      <div class="flex justify-center flex-col">
+        <button
+          id="myBtn"
+          class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded w-fit mx-auto"
+        >
+          Open Modal
+        </button>
+        <div
+          id="myModal"
+          class="flex flex-col justify-center w-1/4 border-2 rounded-lg bg-gray-300 hidden mx-auto"
+        >
+          <div class="flex flex-col justify-center">
+            <h2 class="mx-auto">Hey! I am a modal</h2>
+            <h4 class="mx-auto">Some more info here...</h4>
+          </div>
+          <div class="flex justify-center">
+            <button
+              id="close"
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Close
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </body>
