@@ -4,15 +4,81 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://unpkg.com/@material-tailwind/html@latest/scripts/tabs.js"
+    ></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script
       type="module"
       src="https://unpkg.com/@material-tailwind/html@latest/scripts/popover.js"
     ></script>
     <script src="script.js"></script>
+
     <title>Tailwind CSS</title>
   </head>
   <body>
+    <div class="w-full">
+      <div class="relative right-0">
+        <ul
+          class="relative flex list-none flex-wrap rounded-lg bg-blue-gray-50/60 p-1"
+          data-tabs="tabs"
+          role="list"
+        >
+          <li class="z-30 flex-auto text-center">
+            <a
+              class="text-slate-700 z-30 mb-0 flex w-full cursor-pointer items-center justify-center rounded-lg border-0 bg-inherit px-0 py-1 transition-all ease-in-out"
+              data-tab-target=""
+              active
+              role="tab"
+              aria-selected="true"
+            >
+              <span class="ml-1">HTML</span>
+            </a>
+          </li>
+          <li class="z-30 flex-auto text-center">
+            <a
+              class="text-slate-700 z-30 mb-0 flex w-full cursor-pointer items-center justify-center rounded-lg border-0 bg-inherit px-0 py-1 transition-all ease-in-out"
+              data-tab-target=""
+              role="tab"
+              aria-selected="false"
+            >
+              <span class="ml-1">React</span>
+            </a>
+          </li>
+          <li class="z-30 flex-auto text-center">
+            <a
+              class="text-slate-700 z-30 mb-0 flex w-full cursor-pointer items-center justify-center rounded-lg border-0 bg-inherit px-0 py-1 transition-all ease-in-out"
+              data-tab-target=""
+              role="tab"
+              aria-selected="false"
+            >
+              <span class="ml-1">Vue</span>
+            </a>
+          </li>
+          <li class="z-30 flex-auto text-center">
+            <a
+              class="text-slate-700 z-30 mb-0 flex w-full cursor-pointer items-center justify-center rounded-lg border-0 bg-inherit px-0 py-1 transition-all ease-in-out"
+              data-tab-target=""
+              role="tab"
+              aria-selected="true"
+            >
+              <span class="ml-1">Angular</span>
+            </a>
+          </li>
+          <li class="z-30 flex-auto text-center">
+            <a
+              class="text-slate-700 z-30 mb-0 flex w-full cursor-pointer items-center justify-center rounded-lg border-0 bg-inherit px-0 py-1 transition-all ease-in-out"
+              data-tab-target=""
+              role="tab"
+              aria-selected="true"
+            >
+              <span class="ml-1">Svelte</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <div class="flex flex-col mt-5">
       <div class="text-center mb-5 mt-3 border-t-2 border-gray-600">
         <h2 class="underline decoration-dashed">Form</h2>
@@ -134,6 +200,22 @@
             </button>
           </div>
         </div>
+      </div>
+      <div class="text-center mb-5 mt-3 border-t-2 border-gray-600">
+        <h2 class="underline decoration-dashed">ToolTip</h2>
+      </div>
+      <!-- data-te-toogle -> set it to 'tooltip' -->
+      <div class="text-center">
+        <p>
+          Hover over to see the
+          <a
+            href="#"
+            class="transititext-primary text-primary transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700 border-gray-600"
+            data-te-toggle="tooltip"
+            title="Tooltip exmaple!"
+            >tooltip</a
+          >
+        </p>
       </div>
     </div>
   </body>
